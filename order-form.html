@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Shirt Order Form</title>
+    <link rel="stylesheet" href="CSS/formStyles.css">
+    <script src="JavaScript/orderForm.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="Images/velvet-tee-logo.png" alt="velvet tee company logo" width="200" height="154">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home Page</a>
+                </li>
+                <li>
+                    <a href="#">Shop our Designs</a>
+                </li>
+                <li>
+                    <a href="#">Order Custom Prints</a>
+                </li>
+                <li>
+                    <a href="#" class="login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Custom Order Form</h1>
+        <div title="form instructions">
+            <picture>
+                <source srcset="Images/evolve-design-350w.png 350w,
+                                Images/evolve-design-500w.png 500w,
+                                Images/evolve-design-1000w.png 1000w" 
+                        sizes="(max-width: 650px) 350px,
+                                (max-width: 1025px) 500px,
+                                1000px">
+                <img src="Images/evolve-design-500w.png" alt="man wearing a shirt with a butterfly printed on it"
+                    width="350" height="350" class="intro-img">
+            </picture>
+            <p>
+                We offer several printing methods to meet a variety of needs; whether you want custom
+                shirts for a family reunion, to sell your own designs, or for company advertising, we
+                have you covered. Don't have a design ready? We can take care of that too!
+                Fill out the form below to request an order, and we'll get back to you in 1-2
+                business days with an estimated production time and cost.
+            </p>
+            <p>
+                If you're ordering design work, rest assured that you'll have full creative control
+                throughout the process. One of our skilled designers will work with you from start to
+                finish, to ensure you're 100% satisfied with the end product.
+            </p>
+        </div>
+
+        <!-- tables to style & organize form elements -->
+        <form>
+            <table>
+                <tr>
+                    <td class="percent50">
+                        <label for="first">First Name</label>
+                        <input type="text" name="first-name" id="first" aria-required="true">
+                    </td>
+                    <td class="percent50">
+                        <label for="last">Last Name</label>
+                        <input type="text" name="last-name" id="last" aria-required="true">
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td class="percent100">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" aria-required="true">
+                        <input id="newsletter" type="checkbox" value="yes" name="newsletter-sign-up">
+                        <label for="newsletter">Sign up for our newsletter for exclusive offers!</label>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td class="percent35">
+                        <fieldset class="services">
+                            <legend>Services Needed</legend>
+                            <div class="block">
+                                <input type="checkbox" id="print" name="print-service" value="4.00">
+                                <label for="print">Shirt Prints</label>
+                            </div>
+                            <div class="block">
+                                <input type="checkbox" id="design" name="design-service" value="50.00">
+                                <label for="design">Design Creation</label>
+                            </div>
+                        </fieldset>
+                    </td>
+                    <td class="percent65">
+                        <label for="req">Design Requirements</label>
+                        <textarea id="req" name="design-requirements"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset id="method" role="radiogroup">
+                            <legend>Printing Method</legend>
+                            <div class="block">
+                                <input id="direct" type="radio" name="print-method" value="1.00">
+                                <label for="direct">Direct to Garmet</label>
+                            </div>
+                            <div class="block">
+                                <input id="film" type="radio" name="print-method" value="3.00">
+                                <label for="film">Direct to Film</label>
+                            </div>
+                            <div class="block">
+                                <input id="screen" type="radio" name="print-method" value="4.00">
+                                <label for="screen">Screen Printing</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="quantity">
+                            <label for="qty">Quantity</label>
+                            <select id="qty" name="quantity">
+                                <!-- options will be created with JavaScript in a loop -->
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- text will be added to these elements based on the value in the above fieldset -->
+                        <h2 id="print-method-h2">More Information</h2>
+                        <p id="print-method-info"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="cost"></p>
+            <div class="buttons">
+                <button type="reset" value="Reset">Reset Form</button>
+                <button type="button" value="Estimate">Estimate Total</button>
+                <div class="hover">
+                    <button type="submit" value="Submit">Place Order</button>
+                </div>
+                <div class="popup">All fields are required.</div>
+            </div>
+        </form>
+
+        <p id="message">We look forward to working with you!</p>
+        <picture>
+            <source srcset="Images/flower-design-600w.png 600w,
+                            Images/flower-design-975w.png 975w,
+                            Images/flower-design-1500w.png 1500w"
+                    sizes="(max-width: 650px) 600px,
+                    (max-width: 1025px) 975px,
+                    1500px">
+            <img src="Images/flower-design-600w.png" alt="woman wearing a shirt with flowers printed on it" width="600"
+                height="400" class="center">
+        </picture>
+    </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Shop our Designs</a>
+            </li>
+            <li>
+                <a href="#">Order Custom Prints</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

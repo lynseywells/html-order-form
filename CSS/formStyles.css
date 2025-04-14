@@ -1,0 +1,322 @@
+/* COLOR PALETTE 
+    snow
+    Champagne Pink: #F9E6DD
+    Light Coral: #EA8689
+    Chinese Violet: #6D597A
+    Indigo Dye: #2E4561
+    Rich Black: #0A101F
+
+ * FONTS 
+    Lora - 400 to 700, Italic 
+    Gabriela - 400
+*/
+:root {
+    --pink: #F9E6DD;
+    --coral: #ea8689;
+    --violet: #6D597A;
+    --indigo: #2E4561;
+    --black: #0A101F;
+} 
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    background: white;
+    font: 400 16px/1.5 Lora, serif;
+    margin: 0;
+}
+
+main {
+    background: var(--pink);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 40px;
+}
+
+h1 {
+    font: 400 36px/1.5 Gabriela, serif;
+    color: var(--indigo);
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    /* center items vertically - put items in one row */
+    display: flex;
+    align-items: center;
+    /* inner padding & drop shadow */
+    box-sizing: border-box;
+    padding: 15px 40px;
+    box-shadow: 0 2px 3px var(--coral);
+    height: 175px;
+    /* allows the drop shadow to be seen */
+    margin-bottom: 3px;
+}
+
+/********************************************/
+/********** MAIN NAVIGATION STYLING**********/
+nav {
+    width: 100%;
+}
+nav ul {
+    /* display all list items in one row */
+    display: flex;
+    /* remove default indentation of list items from ul */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* font */
+    font: 400 30px/1.5 Gabriela, serif;
+}
+nav li {
+    /* add space between nav items */
+    padding: 0 0 0 40px;
+}
+nav li:last-child {
+    margin-left: auto;
+}
+/* color all links */
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: var(--coral);
+}
+a:focus {
+    color: var(--indigo);
+}
+a:hover {
+    color: var(--violet);
+}
+/* style the login button */
+.login {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.login:link, .login:visited {
+    background-color: var(--coral);
+    color: white;
+}
+.login:hover {
+    background-color: var(--violet);
+    color: var(--pink);
+}
+.login:focus {
+    background-color: var(--indigo);
+}
+
+footer ul {
+    /* display all list items in one row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* remove default indentation of list items from ul */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* font */
+    font: 400 18px/1.5 Gabriela, serif;
+    height: 80px;
+}
+footer ul li {
+    padding: 0 20px;
+}
+footer {
+    box-shadow: 0 -2px 3px var(--coral);
+}
+
+#message {
+    font: 400 36px/1.5 Gabriela, serif;
+    text-align: center;
+    color: var(--violet);
+    margin-top: 20px;
+}
+/***********************************************/
+/********** FORM INSTRUCTIONS SECTION **********/
+div[title="form instructions"] {
+    /* title underline */
+    border-top: var(--coral) solid 2px;
+    padding-top: 15px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.intro-img {
+    float: left;
+    margin-right: 20px;
+}
+p {
+    margin: 0 0 10px 0;
+    font: 400 23px/1.6 Lora, serif;
+}
+
+/**********************************/
+/********** FORM STYLING **********/
+form {
+    clear: both;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 100px 200px;
+    color: var(--indigo);
+    font: 400 24px/1.6 Lora, serif;
+}
+table {
+    width: 100%;
+}
+/* adds space between & aligns table data */
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+/* specifies table data width b/c the width attribute on <td> is obsolete*/
+.percent50 {
+ width: 50%;
+}
+
+.percent100 {
+    width: 100%;
+}
+
+.percent35 {
+    width: 35%;
+}
+
+.percent65 {
+    width: 65%;
+}
+
+/********** SIZES INPUT FIELDS *********/
+/* sizes text & email input fields */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    height: 30px;
+    border-color: var(--coral);
+    font: 400 22px/1.5 Lora, serif;
+    color: var(--violet);
+}
+/* sizes checkbox */
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+.news-checkbox {
+    text-align: right;
+}
+fieldset {
+    width: 100%;
+    height: 100px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+select {
+    /* causes the options to appear below rather than above the element */
+    position: absolute;
+    top: 5px;
+    left: 90px;
+    font-size: 18px;
+    min-height: 30px;
+    min-width: 50px;
+    /* prevent's reset button from appearing on top*/
+    z-index: 5;
+}
+
+/********** STYLES LABELS **********/
+/* forces labels for text input onto a new line */
+label, legend {
+    font: 500 28px/1.5 Lora, serif;
+    /* force input field to the next line */
+    display: block;
+}
+/* makes the labels for checkboxes & radio buttons appear inline */
+[for="newsletter"], [for="qty"], fieldset label {
+    font: 500 22px/1.5 Lora, serif;
+    display: inline;
+}
+/* adds space above & indents newsletter checkbox */
+#newsletter, label[for="newsletter"] {
+    margin-top: 10px;
+}
+#newsletter {
+    margin-left: 15px;
+}
+/* estimated cost paragraph font */
+.cost {
+    font: 400 30px/1.5 Gabriela, serif;
+    text-align: center;
+}
+
+/********** SIZES METHOD INFO SECTION & TEXTAREA **********/
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border-color: var(--coral);
+    border-width: 2px;
+    font: 400 22px/1.5 Lora, serif;
+    color: var(--violet);
+}
+/* font for info h2 & textarea label */
+#print-method-h2, [for="req"] {
+    font: 500 28px/1.5 Lora, serif;
+    margin: 0;
+    margin-bottom: 4px;
+}
+#print-method-info {
+    font-size: 18px;
+    border: 2px solid var(--coral);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 150px;
+}
+
+/********** ALIGN ELEMENTS **********/
+/* aligns quantity select box */
+.quantity {
+    margin-top: 60px;
+    margin-left: 5px;
+    /* used to positon the select element relative to this div */
+    position: relative;
+}
+/* forces checkboxes/radio inputs onto their own line */
+.block {
+    display: block;
+}
+/* centers image at the bottom of the page */
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+/********** STYLES & ALIGNS BUTTONS **********/
+button {
+    background-color: var(--pink);
+    border-color: var(--coral);
+    border-width: 3px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font: 400 24px/1.5 Gabriela, serif;
+    color: var(--violet);
+    margin: 0 20px;
+}
+.buttons {
+    text-align: center;
+    position: relative;
+}
+.hover {
+    display: inline;
+}
+.popup {
+    position: absolute;
+    /* centers the popup in the div*/
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+    height: 75px;
+    font: 400 20px/1.5 Gabriela, serif;
+    color: var(--violet);
+}
